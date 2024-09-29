@@ -4,6 +4,7 @@ import Hero from ".././blocks/Hero";
 import Image from ".././blocks/Image";
 import RecentPosts from ".././blocks/RecentPosts";
 import RichText from ".././blocks/RichText";
+import Categories from "./Categories";
 
 const Posts: CollectionConfig = {
   slug: "posts",
@@ -35,6 +36,13 @@ const Posts: CollectionConfig = {
       relationTo: "users",
       required: true,
       label: "Author",
+    },
+    {
+      name: "categories",
+      type: "relationship",
+      relationTo: "categories",
+      label: "Categories",
+      hasMany: true,
     },
   ],
 };

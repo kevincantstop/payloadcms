@@ -9,6 +9,15 @@ const Categories: CollectionConfig = {
       required: true,
       label: "Name",
     },
+    {
+      name: "slug",
+      type: "text",
+      label: "Slug",
+      required: true,
+      admin: {
+        position: "sidebar",
+      },
+    },
   ],
 };
 
