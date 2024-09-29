@@ -36,6 +36,9 @@ const Posts: CollectionConfig = {
       relationTo: "users",
       required: true,
       label: "Author",
+      admin: {
+        position: "sidebar",
+      },
     },
     {
       name: "categories",
@@ -43,6 +46,9 @@ const Posts: CollectionConfig = {
       relationTo: "categories",
       label: "Categories",
       hasMany: true,
+      admin: {
+        position: "sidebar",
+      },
     },
   ],
 };
