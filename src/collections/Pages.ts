@@ -29,6 +29,26 @@ const Pages: CollectionConfig = {
       type: "blocks",
       blocks: [Hero, Image, RecentPosts, RichText],
     },
+    {
+      name: "author",
+      type: "relationship",
+      relationTo: "users",
+      required: true,
+      label: "Author",
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
+      name: "categories",
+      type: "relationship",
+      relationTo: "categories",
+      label: "Categories",
+      hasMany: true,
+      admin: {
+        position: "sidebar",
+      },
+    },
   ],
 };
 
