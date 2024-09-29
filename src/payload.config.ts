@@ -10,6 +10,7 @@ import Users from "./collections/Users";
 import Pages from "./collections/Pages";
 import Posts from "./collections/Posts";
 import Categories from "./collections/Categories";
+import Media from "./collections/Media";
 
 export default buildConfig({
   admin: {
@@ -17,7 +18,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Pages, Posts, Categories],
+  collections: [Users, Pages, Posts, Categories, Media],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
