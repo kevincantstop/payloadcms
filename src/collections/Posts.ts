@@ -4,7 +4,8 @@ import Hero from ".././blocks/Hero";
 import Image from ".././blocks/Image";
 import RecentPosts from ".././blocks/RecentPosts";
 import RichText from ".././blocks/RichText";
-import Categories from "./Categories";
+
+import slugField from ".././fields/slugField";
 
 const Posts: CollectionConfig = {
   slug: "posts",
@@ -15,15 +16,7 @@ const Posts: CollectionConfig = {
       label: "Name",
       required: true,
     },
-    {
-      name: "slug",
-      type: "text",
-      label: "Slug",
-      required: true,
-      admin: {
-        position: "sidebar",
-      },
-    },
+    slugField(),
     {
       name: "layout",
       type: "blocks",

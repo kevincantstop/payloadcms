@@ -1,5 +1,7 @@
 import { CollectionConfig } from "payload/types";
 
+import slugField from ".././fields/slugField";
+
 const Categories: CollectionConfig = {
   slug: "categories",
   fields: [
@@ -9,15 +11,7 @@ const Categories: CollectionConfig = {
       required: true,
       label: "Name",
     },
-    {
-      name: "slug",
-      type: "text",
-      label: "Slug",
-      required: true,
-      admin: {
-        position: "sidebar",
-      },
-    },
+    slugField(),
   ],
 };
 
