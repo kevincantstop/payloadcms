@@ -1,5 +1,10 @@
 import { CollectionConfig } from "payload/types";
 
+import Hero from ".././blocks/Hero";
+import Image from ".././blocks/Image";
+import RecentPosts from ".././blocks/RecentPosts";
+import RichText from ".././blocks/RichText";
+
 const Pages: CollectionConfig = {
   slug: "pages",
   fields: [
@@ -22,9 +27,7 @@ const Pages: CollectionConfig = {
       name: "layout",
       label: "Layout",
       type: "blocks",
-      blocks: [
-        // Define your blocks here
-      ],
+      blocks: [Hero, Image, RecentPosts, RichText],
     },
   ],
 };
