@@ -8,10 +8,6 @@ import Links from "../blocks/Links";
 
 const Regions: CollectionConfig = {
   slug: "regions",
-  auth: {
-    useAPIKey: true,
-    disableLocalStrategy: true,
-  },
   fields: [
     {
       name: "region",

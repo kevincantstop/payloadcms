@@ -4,10 +4,6 @@ import linkGroup from "../fields/linkGroup";
 
 const Settings: CollectionConfig = {
   slug: "settings",
-  auth: {
-    useAPIKey: true,
-    disableLocalStrategy: true,
-  },
   fields: [
     linkGroup({
       appearances: ["primary", "secondary"],

@@ -4,10 +4,6 @@ import type { CollectionConfig } from "payload/types";
 
 const Media: CollectionConfig = {
   slug: "media",
-  auth: {
-    useAPIKey: true,
-    disableLocalStrategy: true,
-  },
   upload: {
     staticDir: path.resolve(__dirname, "../../../media"),
   },

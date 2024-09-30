@@ -10,10 +10,6 @@ import slugField from ".././fields/slugField";
 
 const Pages: CollectionConfig = {
   slug: "pages",
-  auth: {
-    useAPIKey: true,
-    disableLocalStrategy: true,
-  },
   admin: {
     useAsTitle: "title",
   },
