@@ -8,7 +8,21 @@ import Links from "../blocks/Links";
 
 const Regions: CollectionConfig = {
   slug: "regions",
+  admin: {
+    useAsTitle: "name",
+  },
   fields: [
+    {
+      name: "name",
+      type: "text",
+      label: "Name",
+      required: true,
+    },
+    {
+      name: "description",
+      type: "text",
+      label: "Description",
+    },
     {
       name: "region",
       type: "array",

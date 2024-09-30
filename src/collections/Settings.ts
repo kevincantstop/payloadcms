@@ -4,7 +4,21 @@ import linkGroup from "../fields/linkGroup";
 
 const Settings: CollectionConfig = {
   slug: "settings",
+  admin: {
+    useAsTitle: "name",
+  },
   fields: [
+    {
+      name: "name",
+      type: "text",
+      label: "Name",
+      required: true,
+    },
+    {
+      name: "description",
+      type: "text",
+      label: "Description",
+    },
     linkGroup({
       appearances: ["primary", "secondary"],
       overrides: {
