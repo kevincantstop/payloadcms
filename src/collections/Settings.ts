@@ -1,9 +1,13 @@
-import type { GlobalConfig } from "payload/types";
+import { CollectionConfig } from "payload/types";
 
 import linkGroup from "../fields/linkGroup";
 
-const Settings: GlobalConfig = {
+const Settings: CollectionConfig = {
   slug: "settings",
+  auth: {
+    useAPIKey: true,
+    disableLocalStrategy: true,
+  },
   fields: [
     linkGroup({
       appearances: ["primary", "secondary"],

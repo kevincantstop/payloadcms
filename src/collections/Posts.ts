@@ -10,6 +10,10 @@ import slugField from ".././fields/slugField";
 
 const Posts: CollectionConfig = {
   slug: "posts",
+  auth: {
+    useAPIKey: true,
+    disableLocalStrategy: true,
+  },
   fields: [
     {
       name: "name",

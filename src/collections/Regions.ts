@@ -1,4 +1,4 @@
-import type { GlobalConfig } from "payload/types";
+import { CollectionConfig } from "payload/types";
 
 import Hero from "../blocks/Hero";
 import Image from "../blocks/Image";
@@ -6,8 +6,12 @@ import RecentPosts from "../blocks/RecentPosts";
 import RichText from "../blocks/RichText";
 import Links from "../blocks/Links";
 
-const Regions: GlobalConfig = {
+const Regions: CollectionConfig = {
   slug: "regions",
+  auth: {
+    useAPIKey: true,
+    disableLocalStrategy: true,
+  },
   fields: [
     {
       name: "region",

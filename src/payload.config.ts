@@ -11,8 +11,8 @@ import Pages from "./collections/Pages";
 import Posts from "./collections/Posts";
 import Categories from "./collections/Categories";
 import Media from "./collections/Media";
-import Settings from "./globals/Settings";
-import Regions from "./globals/Regions";
+import Settings from "./collections/Settings";
+import Regions from "./collections/Regions";
 
 export default buildConfig({
   admin: {
@@ -20,8 +20,8 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Pages, Posts, Categories, Media],
-  globals: [Settings, Regions],
+  collections: [Users, Pages, Posts, Categories, Media, Settings, Regions],
+  globals: [],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
