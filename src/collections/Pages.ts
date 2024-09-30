@@ -19,6 +19,12 @@ const Pages: CollectionConfig = {
   },
   fields: [
     {
+      name: "title",
+      type: "text",
+      label: "Title",
+      required: true,
+    },
+    {
       name: "categories",
       type: "relationship",
       relationTo: "categories",
@@ -62,12 +68,6 @@ const Pages: CollectionConfig = {
           label: "Page Content",
           name: "content",
           fields: [
-            {
-              name: "title",
-              type: "text",
-              label: "Title",
-              required: true,
-            },
             slugField(),
             {
               name: "layout",
