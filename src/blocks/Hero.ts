@@ -1,12 +1,14 @@
 import { Block } from "payload/types";
 
+import linkGroup from "../fields/linkGroup";
+
 const Hero: Block = {
   slug: "hero",
   fields: [
     {
       name: "heading",
       label: "Heading",
-      type: "richText",
+      type: "text",
       required: true,
     },
     {
@@ -14,6 +16,12 @@ const Hero: Block = {
       label: "Subheading",
       type: "text",
     },
+    linkGroup({
+      appearances: ["primary", "secondary"],
+      overrides: {
+        maxRows: 2,
+      },
+    }),
   ],
 };
 

@@ -11,6 +11,7 @@ import Pages from "./collections/Pages";
 import Posts from "./collections/Posts";
 import Categories from "./collections/Categories";
 import Media from "./collections/Media";
+import Settings from "./globals/Settings";
 
 export default buildConfig({
   admin: {
@@ -19,6 +20,7 @@ export default buildConfig({
   },
   editor: slateEditor({}),
   collections: [Users, Pages, Posts, Categories, Media],
+  globals: [Settings],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
