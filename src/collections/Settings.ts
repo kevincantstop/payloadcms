@@ -19,24 +19,31 @@ const Settings: CollectionConfig = {
       type: "text",
       label: "Description",
     },
-    linkGroup({
-      appearances: ["primary", "secondary"],
-      overrides: {
-        maxRows: 20,
-      },
-    }),
     {
       name: "settings",
       type: "array",
       label: "Settings",
       fields: [
         {
-          name: "name",
-          type: "text",
-        },
-        {
-          name: "value",
-          type: "text",
+          type: "row",
+          fields: [
+            {
+              name: "name",
+              type: "text",
+              required: true,
+              admin: {
+                width: "50%",
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              required: true,
+              admin: {
+                width: "50%",
+              },
+            },
+          ],
         },
       ],
     },

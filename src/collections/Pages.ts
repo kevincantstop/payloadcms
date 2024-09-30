@@ -74,21 +74,28 @@ const Pages: CollectionConfig = {
           ],
         },
         {
-          label: "Seo Configurations",
+          label: "SEO",
           name: "seo",
           fields: [
             {
-              name: "settings",
-              type: "array",
-              label: "Settings",
+              type: "row",
               fields: [
                 {
-                  name: "name",
-                  type: "text",
-                },
-                {
-                  name: "value",
-                  type: "text",
+                  name: "settings",
+                  type: "array",
+                  label: "Settings",
+                  fields: [
+                    {
+                      name: "name",
+                      type: "text",
+                      required: true,
+                    },
+                    {
+                      name: "value",
+                      type: "text",
+                      required: true,
+                    },
+                  ],
                 },
               ],
             },
