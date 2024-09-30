@@ -10,16 +10,34 @@ const Users: CollectionConfig = {
     useAsTitle: "email",
   },
   fields: [
-    // Email added by default
-    // Add more fields as needed
     {
-      name: "slug", // We're adding this field
+      name: "name",
       type: "text",
-      required: true,
-      label: "Slug",
+    },
+    {
+      name: "disabled",
+      type: "checkbox",
+      label: "Disabled",
+      defaultValue: false,
       admin: {
         position: "sidebar",
       },
+    },
+    {
+      name: "roles",
+      type: "select",
+      hasMany: true,
+      defaultValue: ["user"],
+      options: [
+        {
+          label: "admin",
+          value: "admin",
+        },
+        {
+          label: "user",
+          value: "user",
+        },
+      ],
     },
   ],
 };

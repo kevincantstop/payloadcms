@@ -48,6 +48,15 @@ const Pages: CollectionConfig = {
         position: "sidebar",
       },
     },
+    {
+      name: "hide",
+      type: "checkbox",
+      label: "Hide",
+      defaultValue: false,
+      admin: {
+        position: "sidebar",
+      },
+    },
   ],
 };
 

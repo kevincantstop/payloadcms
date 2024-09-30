@@ -39,6 +39,15 @@ const Posts: CollectionConfig = {
       },
     },
     {
+      name: "hide",
+      type: "checkbox",
+      label: "Hide",
+      defaultValue: false,
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
       name: "categories",
       type: "relationship",
       relationTo: "categories",
