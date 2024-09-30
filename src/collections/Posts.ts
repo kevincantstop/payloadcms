@@ -14,26 +14,16 @@ const Posts: CollectionConfig = {
     useAPIKey: true,
     disableLocalStrategy: true,
   },
+  admin: {
+    useAsTitle: "title",
+  },
   fields: [
     {
-      name: "name",
-      type: "text",
-      label: "Name",
-      required: true,
-    },
-    slugField(),
-    {
-      name: "layout",
-      type: "blocks",
-      label: "Layout",
-      blocks: [Hero, Image, RecentPosts, RichText, Links],
-    },
-    {
-      name: "author",
+      name: "categories",
       type: "relationship",
-      relationTo: "users",
-      required: true,
-      label: "Author",
+      relationTo: "categories",
+      label: "Categories",
+      hasMany: true,
       admin: {
         position: "sidebar",
       },
@@ -48,14 +38,67 @@ const Posts: CollectionConfig = {
       },
     },
     {
-      name: "categories",
+      name: "author",
       type: "relationship",
-      relationTo: "categories",
-      label: "Categories",
-      hasMany: true,
+      relationTo: "users",
+      required: true,
+      label: "Author",
       admin: {
         position: "sidebar",
       },
+    },
+    {
+      name: "meta",
+      type: "json",
+      label: "Meta",
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
+      type: "tabs",
+      tabs: [
+        {
+          label: "Post Content",
+          name: "content",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              label: "Title",
+              required: true,
+            },
+            slugField(),
+            {
+              name: "layout",
+              type: "blocks",
+              label: "Layout",
+              blocks: [Hero, Image, RecentPosts, RichText, Links],
+            },
+          ],
+        },
+        {
+          label: "Seo Configurations",
+          name: "seo",
+          fields: [
+            {
+              name: "settings",
+              type: "array",
+              label: "Settings",
+              fields: [
+                {
+                  name: "name",
+                  type: "text",
+                },
+                {
+                  name: "value",
+                  type: "text",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   ],
 };
