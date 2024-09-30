@@ -7,9 +7,6 @@ const Media: CollectionConfig = {
   upload: {
     staticDir: path.resolve(__dirname, "../../../media"),
   },
-  access: {
-    read: () => true,
-  },
   fields: [
     {
       name: "alt",
