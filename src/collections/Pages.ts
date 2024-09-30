@@ -4,6 +4,8 @@ import Hero from ".././blocks/Hero";
 import Image from ".././blocks/Image";
 import RecentPosts from ".././blocks/RecentPosts";
 import RichText from ".././blocks/RichText";
+import Links from ".././blocks/Links";
+
 import slugField from ".././fields/slugField";
 
 const Pages: CollectionConfig = {
@@ -20,7 +22,7 @@ const Pages: CollectionConfig = {
       name: "layout",
       label: "Layout",
       type: "blocks",
-      blocks: [Hero, Image, RecentPosts, RichText],
+      blocks: [Hero, Image, RecentPosts, RichText, Links],
     },
     {
       name: "author",
