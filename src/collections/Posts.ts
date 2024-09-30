@@ -20,6 +20,7 @@ const Posts: CollectionConfig = {
       label: "Title",
       required: true,
     },
+    slugField(),
     {
       name: "categories",
       type: "relationship",
@@ -64,7 +65,6 @@ const Posts: CollectionConfig = {
           label: "Post Content",
           name: "content",
           fields: [
-            slugField(),
             {
               name: "layout",
               type: "blocks",

@@ -20,6 +20,7 @@ const Pages: CollectionConfig = {
       label: "Title",
       required: true,
     },
+    slugField(),
     {
       name: "categories",
       type: "relationship",
@@ -64,7 +65,6 @@ const Pages: CollectionConfig = {
           label: "Page Content",
           name: "content",
           fields: [
-            slugField(),
             {
               name: "layout",
               type: "blocks",
